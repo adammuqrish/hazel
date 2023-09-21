@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.html");
+    exit;
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +45,7 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid flex-row">
-                <h3 class="my-0">WELCOME</h3>
+                <h3 class="my-0"><?php echo "Welcome, " . $_SESSION["username"] . "!";?></h3>
                 <!-- <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
@@ -45,7 +56,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="true" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="true" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="about_hazel.html">Gallery</a>
