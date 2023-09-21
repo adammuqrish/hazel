@@ -21,12 +21,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <style>
         /* Custom CSS for navbar and footer */
         .navbar {
-            background-color: lightblue;
-            border-bottom: 2px solid blue; 
+            background-color: #3700B3; 
         }
-        .footer {
-            border-top: 2px solid green; 
-            background-color: #94bbe9;
+        .footer { 
+            background-color: #3700B3;
         }
         .nav-item {
         transition: background-color 0.3s ease; /* Add a transition effect */
@@ -39,30 +37,43 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         .nav-item:active {
             background-color: rgba(0, 0, 0, 0.3); /* Darker background color when clicked */
         }
+        .bg {
+            background-color: #7e3ff2;
+        }
+        .bg-2 {
+            background-color: #6200EE;
+        }
+        .bg-white {
+            background-color: #ffffff;
+        }
+        /* Create a custom shadow class */
+        .custom-shadow {
+            box-shadow: 0px 10px 10px rgba(0.5, 0.5, 0.5, 0.3); /* Adjust values as needed */
+        }
     </style>
 </head>
-<body class="bg-primary-subtle">
+<body class="bg">
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid flex-row">
-                <h3 class="my-0">WELCOME Hazel!</h3>
+        <nav class="navbar navbar-expand-lg custom-shadow">
+            <div class="container-fluid flex-row ">
+                <h3 class="my-0 text-white">WELCOME Hazel!</h3>
                 <!-- <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler bg-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse rounded" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="true" href="index.html">Home</a>
+                            <a class="nav-link active text-white" aria-current="true" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="about_hazel.html">Gallery</a>
+                            <a class="nav-link text-white" aria-current="page" href="about_hazel.html">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="video_hazel.html">Videos</a>
+                            <a class="nav-link text-white" aria-current="page" href="video_hazel.html">Videos</a>
                         </li>
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
@@ -82,13 +93,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </nav>
     </header>
 
-    <div class="container mt-2 mb-2">
+    <div class="container my-4">
         <main>
             <section>
-                <div class="container mt-2">
-                    <div class="card">
+                <div class="container">
+                    <div class="card custom-shadow">
                         <img src="images\photo_6314389622578329228_y - Copy.jpg" class="card-img-top" alt="...">                        
-                        <div class="card-body">
+                        <div class="card-body rounded-bottom">
                           <h5 class="card-title">Nur Ain Zulaikha binti Abd Rahim</h5>
                           <ul class="list-group">
                             <li class="list-group-item">Birthday: 23 January 2005</li>
@@ -97,7 +108,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             <li class="list-group-item">Age: 18</li>
                             <li class="list-group-item">Height: 130cm</li>
                           </ul>
-                          <a href="about_hazel.html" class="btn btn-primary mt-2">View</a>
+                          <a href="about_hazel.html" class="btn bg-2 mt-2 text-white">View</a>
                         </div>
                     </div>
                 </div>
@@ -128,8 +139,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
 
     <footer>
-        <div class="container-fluid sticky-bottom footer">
-            <strong>Copyright &copy; 2023-? <a href="#">Hak Milik Adam & Ain</a>.</strong> All rights reserved.
+        <div class="container-fluid sticky-bottom footer py-2">
+            <strong class="text-white">Copyright &copy; 2023-? <a href="#">Hak Milik Adam & Ain.</a></strong> <b class="text-white">All rights reserved.</b>
         </div>
     </footer>
 </body>
