@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>Hazel's Videos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
@@ -63,12 +63,12 @@
         <main>
             <section>
                 <div class="container px-0 my-2">
-                    <video src="images\IMG_1241.MOV" class="object-fit-contain mx-auto d-block rounded-5" controls style="max-width: 100%; max-height: 500px;">
+                    <video id="video1" src="images/IMG_1241.MOV" class="object-fit-contain mx-auto d-block rounded-5" controls style="max-width: 100%; max-height: 500px;">
                         Your browser does not support the video tag.
                     </video>                    
                 </div>
                 <div class="container px-0 my-2">
-                    <video src="images\IMG_1255.MOV" class="object-fit-contain mx-auto d-block rounded-5" controls style="max-width: 100%; max-height: 500px;">
+                    <video id="video2" src="images/IMG_1255.MOV" class="object-fit-contain mx-auto d-block rounded-5" controls style="max-width: 100%; max-height: 500px;">
                         Your browser does not support the video tag.
                     </video>                   
                 </div>
@@ -112,16 +112,8 @@
                         Your browser does not support the video tag.
                     </video>                   
                 </div>
-            </section>            
-
-            <section>
-                <!-- Add content for this section -->
             </section>
             
-            <section>
-                <!-- Add content for this section -->
-            </section>
-
             <!-- Add more sections as needed -->
         </main>
     </div>
@@ -132,4 +124,22 @@
         </div>
     </footer>
 </body>
+
+<script>
+    var videos = document.querySelectorAll('video');
+
+    videos.forEach(function(video) {
+        video.addEventListener('play', function() {
+            pauseOtherVideos(video);
+        });
+    });
+
+    function pauseOtherVideos(currentVideo) {
+        videos.forEach(function(video) {
+            if (video !== currentVideo) {
+                video.pause();
+            }
+        });
+}
+</script>
 </html>
