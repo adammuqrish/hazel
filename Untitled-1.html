@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Photos Clone</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Google Photos Clone</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Albums</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Shared</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Content -->
+<div class="container mt-4">
+    <div class="row">
+        <!-- Photo Grid -->
+        <div class="col-lg-9">
+            <div class="row">
+                <!-- Sample Photo Cards -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="photo_6314389622578329228_y.jpg" class="card-img-top" alt="Sample Photo">
+                        <div class="card-body">
+                            <h5 class="card-title">Photo Title</h5>
+                            <p class="card-text">Description of the photo goes here.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for more photos -->
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Albums</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Album 1</li>
+                        <li class="list-group-item">Album 2</li>
+                        <li class="list-group-item">Album 3</li>
+                        <!-- Add more albums here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
