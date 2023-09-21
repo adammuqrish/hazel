@@ -85,3 +85,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
     width: 100%;
   }
 }
+/* Lock the website to portrait orientation on mobile devices */
+@media (max-width: 768px) and (orientation: landscape) {
+  body {
+      transform: rotate(90deg);
+      transform-origin: left top;
+      width: 100vh;
+      height: 100vw;
+      overflow-x: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+  }
+}
